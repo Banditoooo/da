@@ -1,0 +1,43 @@
+﻿<Window x:Class="MbFinalTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MbFinalTest"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition  Height="auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Поиск"></Label>
+            <Label Grid.Column="1" Content="Сортировка"></Label>
+            <Label Grid.Column="2" Content="Фильтрация"></Label>
+            <Label Grid.Column="3" Content="Вы зашли как:"></Label>
+            <Label x:Name="User_label"  Grid.Row="1" Grid.Column="3"></Label>
+            <TextBox  x:Name="Search_textbox" Grid.Row="1" ></TextBox>
+            <ComboBox  x:Name="Sort_combobox" Grid.Row="1" Grid.Column="1"  ></ComboBox>
+            <ComboBox x:Name="Filtr_combobox" Grid.Row="1"   Grid.Column="2" ></ComboBox>
+        </Grid>
+
+        <ScrollViewer Grid.Row="1">
+            <StackPanel >
+                <ListView x:Name="product_list" />
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
